@@ -1,7 +1,7 @@
 .App {
-  text-align: center;
+  background-color: #282c34;
+  color: white;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +26,32 @@
 
 .App-link {
   color: #61dafb;
+}
+header {
+  min-width: 100%;
+  border-bottom: solid 2px orange;
+}
+.loading {
+  width: 100%;
+  margin: 15%;
+  font-size: 2rem;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+div .card {
+  max-width: 20rem;
+
+  align-content: space-around;
+  margin: 3rem;
 }
 
 @keyframes App-logo-spin {
