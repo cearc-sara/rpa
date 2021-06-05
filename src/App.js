@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import CardList from './components/cardList';
 import {getCards} from './actions/index';
+import PacmanLoader from 'react-spinners/PacmanLoader';
 
 import './App.css';
 
@@ -19,10 +20,12 @@ function App(props) {
       <header className="App-header">
         <h1>Hearthstone Cards</h1>
       </header>
+      {/*will be used in the future*/}
+      {/* <button onClick={()=>setPage(1)}>1</button> */}
 
-      <button onClick={()=>setPage(1)}>1</button>
-
-      {!loadingCards ? (<CardList/>) : (<div className='loading'>Searching for Cards</div>)}
+      {!loadingCards ? (<CardList/>) : 
+      (<div className='loading'>
+        <PacmanLoader className='spinner' color={'magenta'}/>Searching for Cards...</div>)}
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}
     </div>
   );
