@@ -11,7 +11,6 @@ export const getCards = (page) => {
         dispatch({type: GET_CARDS});
         axios.request(options)
         .then((res) => {
-            console.log("res.data", res.data)
             dispatch({type:GET_CARDS_SUCCESS, payload: res.data})
         })
         .catch((err) => {
