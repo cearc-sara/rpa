@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import Cards from './cards';
 
 function CardList(props) {
-    console.log("props", props)
     return(
         <div>
             {props.cards.map((card) => {
